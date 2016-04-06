@@ -1,0 +1,60 @@
+<!-- Jumbotron : Welcome message -->
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="display-3">My Profile</h2>
+  </div>
+</div> <!-- Jumbotrong -->
+
+
+{{#user}}
+<div  id="userinfo_name">  
+  <div class="row">
+    <div class="col-md-12">
+      <h4 id="table_tittle">Name</h4>
+      <div id="orderdetails">
+        <p>First name: {{ this.name.firstname }}</p> 
+        <p>Last name: {{ this.name.lastname }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <h4 id="table_tittle">Email</h4>
+      <div id="orderdetails">
+        <p>Email: {{ this.email}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4 id="table_tittle">Gender</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4 id="table_tittle">Age</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4 id="table_tittle">Facebook Account</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+{{/user}}

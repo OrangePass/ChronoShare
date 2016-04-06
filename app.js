@@ -11,6 +11,7 @@ var db = require('./config/db');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var profile = require('./routes/profile');
 var delivers = require('./routes/delivers');
 var delivers_select = require('./routes/delivers_select');
 var discussion = require('./routes/discussion');
@@ -20,7 +21,9 @@ var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
+var ordersdelivered = require('./routes/ordersdelivered')
 var orderdetails = require('./routes/orderdetails');
+var orderstatus_change = require('./routes/orderstatus_change');
 
 var app = express();
 
@@ -45,13 +48,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/users/profile', profile);
 app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
 app.use('/users/ordersplaced', ordersplaced);
+app.use('/users/ordersdelivered', ordersdelivered);
 app.use('/users/delivers_select', delivers_select);
 app.use('/users/discussion',discussion);
-app.use('/users/orderdetails', orderdetails);
+app.use('/orders/details', orderdetails);
+app.use('/orders/status_change', orderstatus_change);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);
